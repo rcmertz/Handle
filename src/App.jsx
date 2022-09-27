@@ -60,8 +60,7 @@ const App = () => {
               margin: '16px 0',
             }}
           >
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
+
           </Breadcrumb>
           <div
             className="site-layout-background"
@@ -70,16 +69,8 @@ const App = () => {
               minHeight: 360,
             }}
           >
-            Bill is a cat.
           </div>
         </Content>
-        <Footer
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Ant Design ©2018 Created by Ant UED
-        </Footer>
       </Layout>
     </Layout>
   );
