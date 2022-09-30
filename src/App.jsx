@@ -1,10 +1,13 @@
 import 'antd/dist/antd.css';
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
+  HomeOutlined,
+  ShoppingCartOutlined,
+  ContainerFilled,
+  HddFilled,
   TeamOutlined,
   UserOutlined,
+
+
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
@@ -19,16 +22,14 @@ function getItem(label, key, icon, children) {
   };
 }
 
+//SIDEBAR
 const items = [
-  getItem('Option 1', '1', <PieChartOutlined />),
-  getItem('Option 2', '2', <DesktopOutlined />),
-  getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
-  ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', '9', <FileOutlined />),
+  getItem('Home', '1', <HomeOutlined />),
+  getItem('Shop', '2', <ShoppingCartOutlined />),
+  getItem('Storage', '3', <ContainerFilled />,),
+  getItem('MovStorage', '4', <HddFilled />),
+  getItem('User', '5', <UserOutlined />,),
+  getItem('Team', '6', <TeamOutlined />,),
 ];
 
 const App = () => {
@@ -44,32 +45,16 @@ const App = () => {
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
-        <Header
-          className="site-layout-background"
-          style={{
-            padding: 0,
-          }}
-        />
+
         <Content
           style={{
             margin: '0 16px',
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: '16px 0',
-            }}
-          >
-
-          </Breadcrumb>
-          <div
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              minHeight: 360,
-            }}
-          >
-          </div>
+        <div>
+          <h1>HANDLE</h1>
+        </div>
+          
         </Content>
       </Layout>
     </Layout>
